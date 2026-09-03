@@ -56,7 +56,7 @@ fichier n'a besoin d'être touchée :
   pointillés avec la mention "à renseigner". Dès que vous renseignez
   l'adresse réelle dans `url`, le lien devient actif automatiquement.
 - **`accessCode`** / **`requireCode`** : le code d'accès de la page
-  d'entrée (`080425` par défaut, comme convenu). **Attention : ce n'est
+  d'entrée (`180640` par défaut, comme convenu). **Attention : ce n'est
   pas une vraie sécurité** — le code est visible en clair dans le code
   source de la page, il ne fait que décourager les visites non désirées.
   Passer `requireCode` à `false` pour supprimer complètement la page

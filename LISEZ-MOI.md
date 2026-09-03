@@ -4,29 +4,25 @@ Page d'accueil unique pour toute l'équipe : elle rassemble tous les outils
 de chiffrage (et les futurs) derrière une seule adresse, facile à retrouver
 sur téléphone.
 
-## 1. Mettre le portail en ligne sur GitHub
+## 1. Le portail est en ligne
 
-1. Aller sur **https://github.com/new**
-2. Nom du dépôt : `xeler-portail` (compte `burgatregis-cloud`, comme pour
-   les deux autres outils)
-3. Laisser "Public" (nécessaire pour GitHub Pages gratuit), ne rien cocher
-   d'autre, cliquer "Create repository"
-4. Sur la page du dépôt vide, cliquer **"uploading an existing file"**,
-   glisser-déposer tout le contenu de ce dossier (`index.html`,
-   `manifest.json`, les dossiers `assets/` et `icons/`), puis
-   **"Commit changes"**
-5. **Settings → Pages** → Source : **"Deploy from a branch"**, branche
-   **main**, dossier **/ (root)**, **Save**
-6. Après 1 à 2 minutes, l'adresse apparaît en haut de cette page :
-   `https://burgatregis-cloud.github.io/xeler-portail/`
+Dépôt GitHub : `burgatregis-cloud/xeler-portail`, publié via GitHub Pages
+(Settings → Pages → branche `main`, dossier `/root`).
 
-C'est cette adresse qu'il faut partager avec l'équipe, et c'est vers elle
-que pointe déjà le bouton "← Portail" ajouté dans les deux outils de
-chiffrage (robots et copieurs).
+Adresse officielle à partager avec l'équipe : **https://portail.xeler.com/**
+— un sous-domaine de `xeler.com` (enregistrement CNAME ajouté dans la zone
+DNS chez Online.net/Scaleway, pointant vers
+`burgatregis-cloud.github.io.`). L'ancienne adresse
+`https://burgatregis-cloud.github.io/xeler-portail/` continue de
+fonctionner en parallèle.
 
-*(Si vous préférez un autre nom de dépôt, remplacez `xeler-portail` par ce
-nom dans les deux fichiers `index.html` des outils de chiffrage, à
-l'endroit indiqué par le commentaire `PORTAIL_URL`.)*
+C'est vers `https://portail.xeler.com/` que pointe déjà le bouton
+"🏠 Portail" ajouté dans les deux outils de chiffrage (robots et
+copieurs).
+
+Pour mettre à jour le portail : modifier les fichiers dans ce dossier,
+committer et pousser sur la branche `main` — GitHub Pages redéploie
+automatiquement en moins d'une minute.
 
 ## 2. Installer le portail comme application
 

@@ -282,21 +282,21 @@ window.PORTAL_CONFIG = {
   ],
 
   fournisseurs: [
-    { label: "Ingram Micro", color: "blue" },
-    { label: "ALSO", color: "teal" },
-    { label: "ECP", color: "purple" },
-    { label: "Cloud Telecom", color: "cyan" },
-    { label: "Copymix", color: "pink" },
-    { label: "Grenke", color: "green" }
+    { label: "Ingram Micro", color: "blue", url: "https://fr-new.ingrammicro.com/cep/app/home" },
+    { label: "ALSO", color: "teal", url: "https://www.also.com/ec/cms5/2000/fr_fr/index.jsp" },
+    { label: "ECP", color: "purple", url: "https://www.europ-computer.com/" },
+    { label: "Cloud Telecom", color: "cyan", url: "https://www.cloud-telecom.fr/" },
+    { label: "Copymix", color: "pink", url: "http://www.copymix.biz/index.php?" },
+    { label: "Grenke", color: "green", url: "https://partner.grenkeonline.com/fr-FR" }
   ],
 
   constructeurs: [
-    { label: "Ricoh", color: "salmon" },
-    { label: "HP", color: "blue" },
-    { label: "Gausium", color: "green" },
-    { label: "Reeman", color: "orange" },
-    { label: "Robotnik", color: "indigo" },
-    { label: "Keenon", color: "pink" }
+    { label: "Ricoh", color: "salmon", url: "https://www.ricoh.fr/" },
+    { label: "HP", color: "blue", url: "https://www.hp.com/fr-fr/home.html" },
+    { label: "Gausium", color: "green", url: "https://gausium.com/fr/" },
+    { label: "Reeman", color: "orange", url: "https://www.reemanrobot.com/" },
+    { label: "Robotnik", color: "indigo", url: "https://robotnik.eu/" },
+    { label: "Keenon", color: "pink", url: "https://www.keenon.com/fra/" }
   ],
 
   // Liens utiles internes — mettez l'URL réelle dans "url" dès que vous
@@ -437,12 +437,21 @@ window.PORTAL_CONFIG = {
     toolsGrid.appendChild(el);
   });
 
-  // ---- Render simple tag chips (fournisseurs / constructeurs) ----
+  // ---- Render tag chips (fournisseurs / constructeurs) — cliquables
+  // vers le site du partenaire dès qu'une URL est renseignée ----
   function renderChips(containerId, items){
     var row = document.getElementById(containerId);
     items.forEach(function(it){
-      var chip = document.createElement("span");
-      chip.className = "chip c-" + it.color;
+      var hasUrl = !!it.url;
+      var chip = document.createElement(hasUrl ? "a" : "span");
+      if (hasUrl){
+        chip.href = it.url;
+        chip.target = "_blank";
+        chip.rel = "noopener";
+        chip.className = "chip is-link c-" + it.color;
+      } else {
+        chip.className = "chip c-" + it.color;
+      }
       chip.innerHTML = '<span class="dot"></span>' + it.label;
       row.appendChild(chip);
     });

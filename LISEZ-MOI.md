@@ -47,10 +47,11 @@ fichier n'a besoin d'être touchée :
   outil (ex. abonnements informatique) dès qu'il existe, il suffit de
   passer son `status` de `"soon"` à `"live"` et de renseigner son `url`.
   Pour ajouter un 5ᵉ outil plus tard, copier un des objets du tableau.
-- **`fournisseurs`** / **`constructeurs`** : simples badges d'information
-  (pas des liens) — ajouter/retirer une entrée `{ label, color }`. Couleurs
-  disponibles : `blue`, `teal`, `purple`, `cyan`, `pink`, `green`,
-  `salmon`, `orange`, `indigo`, `amber`.
+- **`fournisseurs`** / **`constructeurs`** : chips cliquables vers le site
+  de chaque partenaire (ouverture dans un nouvel onglet) — ajouter/retirer
+  une entrée `{ label, color, url }`. Couleurs disponibles : `blue`,
+  `teal`, `purple`, `cyan`, `pink`, `green`, `salmon`, `orange`, `indigo`,
+  `amber`.
 - **`liensUtiles`** : CRM / Drive équipe / Grille tarifaire sont prévus
   mais **sans URL pour l'instant** (`url: ""`) — le chip reste affiché en
   pointillés avec la mention "à renseigner". Dès que vous renseignez
